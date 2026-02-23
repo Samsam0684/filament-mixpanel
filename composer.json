@@ -1,0 +1,63 @@
+{
+    "name": "jeffersongoncalves/filament-mixpanel",
+    "description": "Filament plugin for Mixpanel analytics — tracking script injection and Settings Page to manage Mixpanel configuration directly from your Filament panel. Supports Filament v3, v4, and v5.",
+    "keywords": [
+        "jeffersongoncalves",
+        "laravel",
+        "filament-mixpanel",
+        "mixpanel",
+        "analytics",
+        "filament",
+        "settings"
+    ],
+    "homepage": "https://github.com/jeffersongoncalves/filament-mixpanel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jefferson Goncalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "filament/filament": "^5.0",
+        "filament/spatie-laravel-settings-plugin": "^5.0",
+        "jeffersongoncalves/laravel-mixpanel": "^1.0",
+        "laravel/framework": "^11.0|^12.0",
+        "spatie/laravel-package-tools": "^1.14.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\Filament\\Mixpanel\\": "src"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php ./vendor/bin/testbench icons:cache",
+            "@php ./vendor/bin/testbench package:discover --ansi"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\Filament\\Mixpanel\\MixpanelServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
